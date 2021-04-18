@@ -1,2 +1,2 @@
-# journal
-记账本
+#Journal
+日记帐工具

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_schedule"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/schedule_bk"
+    android:orientation="vertical"
+    tools:context="com.dzt.journal.activity.ScheduleView">
+
+    <com.dzt.journal.widgets.BorderTextView
+        android:id="@+id/scheduleTop"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@mipmap/top_day"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="编辑日程"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        />
+
+    <com.dzt.journal.widgets.BorderTextView
+        android:id="@+id/scheduleType"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:drawableRight="@mipmap/schedule_type"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        />
+
+    <com.dzt.journal.widgets.BorderTextView
+        android:id="@+id/scheduleDate"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        />
+
+    <com.dzt.journal.widgets.BorderEditText
+        android:id="@+id/scheduleText"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginTop="5dp"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="请输入你的日程..."
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#000000"
+        />
+
+    <com.dzt.journal.widgets.BorderTextView
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:background="@mipmap/top_day"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="保存"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        />
+
+</LinearLayout>

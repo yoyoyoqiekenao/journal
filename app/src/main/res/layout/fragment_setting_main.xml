@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:settingItem="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.dzt.journal.settings.FragmentSettingMain">
+
+    <com.dzt.journal.widgets.TitleView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.dzt.journal.widgets.SettingItemView
+                android:id="@+id/item_update_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_height"
+                android:layout_marginTop="@dimen/padding_margin_15"
+                settingItem:settingName="@string/text_modify_classify"
+                settingItem:settingType="arrow"/>
+
+            <com.dzt.journal.widgets.SettingItemView
+                android:id="@+id/item_auto_record"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_height"
+                android:layout_marginTop="@dimen/padding_margin_15"
+                settingItem:settingName="@string/text_toggle"
+                settingItem:settingToggleCheck="close"
+                settingItem:settingType="toggle"/>
+
+            <com.dzt.journal.widgets.SettingItemView
+                android:id="@+id/item_update"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_height"
+                android:layout_marginTop="@dimen/padding_margin_15"
+                settingItem:settingName="@string/text_update"
+                settingItem:settingType="arrow"/>
+
+            <com.dzt.journal.widgets.SettingItemView
+                android:id="@+id/item_about"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_height"
+                android:layout_marginTop="@dimen/padding_margin_15"
+                settingItem:settingName="@string/text_about"
+                settingItem:settingType="arrow"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

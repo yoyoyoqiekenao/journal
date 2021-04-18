@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.dzt.journal">
+
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- 允许应用程序读取所有者数据 -->
+    <uses-permission android:name="android.permission.READ_OWNER_DATA"/>
+    <!-- 允许应用程序写入所有者数据 -->
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"/>
+
+    <application
+        android:name=".LocalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/ActivityTheme.Full">
+        <activity android:name=".main.MainActivity">
+        </activity>
+        <activity android:name=".ActivityLogin"/>
+        <activity android:name=".ActivityRegister"/>
+        <activity android:name=".settings.ActivitySetting"/>
+        <activity android:name=".calendar.CalendarActivity"/>
+        <activity android:name=".record.RecordActivity">
+        </activity>
+        <activity android:name=".budget.BudgetActivity">
+        </activity>
+        <activity android:name=".consume.ConsumeDetailActivity">
+        </activity>
+        <activity android:name=".consume.TodayDetailActivity">
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.AppStartLoad">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ChartActivity">
+        </activity>
+        <activity android:name=".settings.classify.NewClassifyActivity">
+        </activity>
+
+        <service
+            android:name=".JournalService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+        <activity android:name=".record.PhotoViewActivity">
+        </activity>
+        <activity android:name=".edit.EditActivity">
+        </activity>
+    </application>
+
+</manifest>

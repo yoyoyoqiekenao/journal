@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "25.0.1"
+    defaultConfig {
+        applicationId "com.dzt.journal"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 6
+        versionName "1.1.6"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+//    buildTypes {
+//        release {
+//            // 不显示log
+//            buildConfigField "boolean", "LOG_DEBUG", "false"
+//            // 混淆开关
+//            minifyEnabled true
+//            // 是否zip对齐
+//            zipAlignEnabled true
+//            // 是否打开debuggable开关
+//            debuggable false
+//            // 是否打开jniDebuggable开关
+//            jniDebuggable false
+//            // 移除无用的resource文件
+//            // shrinkResources true
+//            // 混淆配置文件
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            // 签名配置
+//            signingConfig signingConfigs.release
+//        }
+//    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //滚轮条件选择器 https://github.com/Bigkoo/Android-PickerView
+    //https://github.com/wyouflf/xUtils3
+    // RecycleViewBaseAdapter  https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+    //图表控件 https://github.com/lecho/hellocharts-android
+    //bmob-sdk
+    //如果你想应用能够兼容Android6.0，请添加此依赖(org.apache.http.legacy.jar)
+    //https://github.com/PhilJay/MPAndroidChart
+    //https://github.com/PhilJay/MPAndroidChart-Realm
+    compile files('libs/afinal_0.5.1_bin.jar')
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:support-v4:25.1.0'
+    compile 'com.android.support:design:25.1.0'
+    compile 'com.contrarywind:Android-PickerView:3.2.4'
+    compile 'org.xutils:xutils:3.5.0'
+
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.13'
+    compile 'cn.bmob.android:bmob-sdk:3.5.3'
+    compile 'cn.bmob.android:http-legacy:1.0'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    compile 'com.github.PhilJay:MPAndroidChart-Realm:v2.0.2@aar'
+    compile 'com.github.chrisbanes:PhotoView:2.0.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    testCompile 'junit:junit:4.12'
+}

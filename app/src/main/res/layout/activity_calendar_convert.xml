@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/schedule_bk"
+    android:orientation="vertical">
+
+    <com.dzt.journal.widgets.BorderTextView
+        android:id="@+id/convertTop"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@mipmap/top_day"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="日期转换"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        />
+
+    <com.dzt.journal.widgets.BorderTextView
+        android:id="@+id/convertDate"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="#ffffff"
+        android:clickable="true"
+        android:drawableRight="@mipmap/date_convert"
+        android:gravity="center"
+        android:paddingRight="5dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        />
+
+    <com.dzt.journal.widgets.BorderTextView
+        android:id="@+id/convert"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="#A0FF20"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingRight="5dp"
+        android:text="查询"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/convertResult"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:background="#A08080"
+        android:gravity="center"
+        android:textColor="#208080"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+</LinearLayout>
